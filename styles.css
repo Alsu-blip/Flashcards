@@ -1,0 +1,54 @@
+body{
+    background-image: url("map1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    display: flex;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.country,
+.capital{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    font-size: 25px;
+    border:1px solid #2f09bc;
+    text-align: center;
+    backface-visibility: hidden;
+}
+p{
+    font-family: "Times New Roman", serif;
+}
+h1{
+    text-align: center;
+    font: italic small-caps bold 16px/2 cursive;
+    font-size: 30px;
+}
+.card{
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+    height: 130px;
+    width: 130px;
+    margin: 10px;
+    perspective: 1000px;
+}
+.country{
+    background: linear-gradient(#8d8de2, #d8dfff);
+    z-index: 2;
+}
+.capital{
+    position: relative;
+    background: linear-gradient(beige, white);
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+.card:hover{
+    transform: rotateY(180deg);
+}
